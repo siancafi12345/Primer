@@ -1,0 +1,8 @@
+{
+  "name": "Primer",
+  "app_id": "be4f6eb0",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
