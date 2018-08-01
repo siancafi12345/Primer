@@ -1,16 +1,36 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Muestra de mis trabajos
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+    <ion-navbar color="primary">
+      <ion-title>Login</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
 
-<ion-content padding>
-  Puedes mirar mi github
-  <p>
-    Este es mi perfil de  <a href="https://github.com/siancafi12345" target="_blank">github</a> clik para verlo.
-  </p>
-
-  <saluda></saluda>
-</ion-content>
+      <ion-list>
+        <ion-item text-center>
+          <ion-img width="192" height="192" [src]="imgSrc" ></ion-img>
+        </ion-item>
+        <ion-item>
+          <ion-icon item-left></ion-icon>
+          <ion-label stacked>Email:</ion-label>
+          <ion-input [(ngModel)]='person' type="text" placeholder="Email" ng-required="person"></ion-input>
+          
+        </ion-item>
+        <ion-item>
+          <ion-icon item-left></ion-icon>
+          <ion-label stacked>Password:</ion-label>
+          <ion-input type="password" placeholder="Password"></ion-input>
+        </ion-item>
+      </ion-list>
+      <div padding>
+        <button ion-button block type="submit" >Ingresar</button>
+      </div>
+    <div text-center>
+      <a ion-button block clear (click)="nueva()">
+        Nueva cuenta
+      </a>
+      <a ion-button block clear (click)="olvide()">
+        Olvide password
+      </a>
+    </div>
+  </ion-content>
