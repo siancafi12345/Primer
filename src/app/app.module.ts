@@ -8,6 +8,8 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { NuevaPage } from '../pages/nueva/nueva';
+import { InicioPage } from '../pages/inicio/inicio';
+
 
 
 
@@ -15,7 +17,8 @@ import { NuevaPage } from '../pages/nueva/nueva';
   declarations: [
     MyApp,
     HomePage,
-    NuevaPage
+    NuevaPage,
+    InicioPage
 
   ],
   imports: [
@@ -28,7 +31,8 @@ import { NuevaPage } from '../pages/nueva/nueva';
   entryComponents: [
     MyApp,
     HomePage,
-    NuevaPage
+    NuevaPage,
+    InicioPage
   ],
   providers: [
     StatusBar,

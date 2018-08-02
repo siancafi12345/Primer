@@ -13,17 +13,17 @@
         <ion-item>
           <ion-icon item-left></ion-icon>
           <ion-label stacked>Email:</ion-label>
-          <ion-input [(ngModel)]='person' type="text" placeholder="Email" ng-required="person"></ion-input>
-          
+          <ion-input type="email" [(ngModel)]='person' placeholder="Email"></ion-input>
         </ion-item>
         <ion-item>
           <ion-icon item-left></ion-icon>
           <ion-label stacked>Password:</ion-label>
-          <ion-input type="password" placeholder="Password"></ion-input>
+          <ion-input type="password" [(ngModel)]='key' placeholder="Password"></ion-input>
         </ion-item>
+        
       </ion-list>
       <div padding>
-        <button ion-button block type="submit" >Ingresar</button>
+        <button ion-button block type="submit"  (click)="Login()">Ingresar</button>
       </div>
     <div text-center>
       <a ion-button block clear (click)="nueva()">
