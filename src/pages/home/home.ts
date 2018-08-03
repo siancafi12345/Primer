@@ -13,6 +13,9 @@ export class HomePage {
 
   imgSrc: string = "../assets/logo/user.jpeg";
   person:string = "";
+  requerido: boolean = false;
+  requeridok: boolean = false;
+
   key: string;
   pa = NuevaPage;
   inicio = InicioPage;
@@ -27,6 +30,21 @@ export class HomePage {
 
   }
   Login(){
+    console.log(this.person);
+    if(this.person == ""){
+      
+      this.requerido = true;
+    }else{
+      this.requerido = false;
+    }
+   
+    if(this.key == undefined){
+      
+      this.requeridok = true;
+    }else{
+      this.requeridok = false;
+    }
+    
     if(this.person == "simon" && this.key == "siancafi1"){ 
       this.navCtrl.push(this.inicio,{
         "person" : this.person});

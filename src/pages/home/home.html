@@ -10,20 +10,29 @@
         <ion-item text-center>
           <ion-img width="192" height="192" [src]="imgSrc" ></ion-img>
         </ion-item>
-        <ion-item>
+        
+      <ion-item>
+          
           <ion-icon item-left></ion-icon>
+          
+          
           <ion-label stacked>Email:</ion-label>
           <ion-input type="email" [(ngModel)]='person' placeholder="Email"></ion-input>
         </ion-item>
+        <p class="red" *ngIf="requerido == true"> Este campo es obligatorio</p>
         <ion-item>
-          <ion-icon item-left></ion-icon>
+          <ion-icon item-left></ion-icon>      
+          
+          
           <ion-label stacked>Password:</ion-label>
           <ion-input type="password" [(ngModel)]='key' placeholder="Password"></ion-input>
         </ion-item>
         
       </ion-list>
+      <p class="red" *ngIf="requeridok == true"> Este campo es obligatorio</p>
       <div padding>
-        <button ion-button block type="submit"  (click)="Login()">Ingresar</button>
+
+        <button ion-button block type="submit" (click)="Login()"  >Ingresar</button>
       </div>
     <div text-center>
       <a ion-button block clear (click)="nueva()">
